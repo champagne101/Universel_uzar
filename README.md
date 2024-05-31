@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 route groups from next to use different layouts
 
 26:40 github talk
-- kayak@Kayaks-MacBook-Pro bank % curl -o- https://raw.git
+- kayak@Kayaks-MacBook-Pro bank % curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 First, run the development server:
 
 ```bash
