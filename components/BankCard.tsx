@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Copy from './Copy'
 
-const BankCard = ({ account, user, showBalance = true }: CreditCardProps) => {
+const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) => {
 
   console.log(account);
   return (
@@ -13,7 +13,7 @@ const BankCard = ({ account, user, showBalance = true }: CreditCardProps) => {
         <div className="bank-card_content">
           <div>
             <h1 className="text-16 font-semibold text-white">
-              {user.name}
+              {account.name}
             </h1>
             <p className="font-ibm-plex-serif font-black text-white">
               {formatAmount(account.currentBalance)}
@@ -23,7 +23,7 @@ const BankCard = ({ account, user, showBalance = true }: CreditCardProps) => {
           <article className="flex flex-col gap-2">
             <div className="flex justify-between">
               <h1 className="text-12 font-semibold text-white">
-                {user.name}
+                {userName}
               </h1>
               <h2 className="text-12 font-semibold text-white">
               ●● / ●●
@@ -60,7 +60,7 @@ const BankCard = ({ account, user, showBalance = true }: CreditCardProps) => {
         />
       </Link>
 
-      {showBalance && <Copy title={account?.sharaebleId} />}
+      {showBalance && <Copy title={account?.shareableId} />}
     </div>
   )
 }

@@ -30,7 +30,6 @@ const AuthForm = ({ type }: { type: string }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  //const loggedInUser = await getLoggedInUser();
   const formSchema = authFormSchema(type);
 
     // 1. Define your form.
@@ -113,11 +112,11 @@ const AuthForm = ({ type }: { type: string }) => {
             </h1>
           </div>
       </header>
-      {user ? ( // we have a user, show this
+      {user ? (
         <div className="flex flex-col gap-4">
           <PlaidLink user={user} variant="primary" />
         </div>
-      ): ( // not a user, show this
+      ): (
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
